@@ -3,8 +3,8 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
-/* const helpers = require('./utils/helpers');
-if i decide to create it */
+const helpers = require('./utils/helpers');
+// if i decide to create it
 
 const sequelize = require('./config/connection');
 
@@ -14,8 +14,8 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-/* for the helpers.js file in utils if i add it.
-// const hbs = exphbs.create({ helpers }); */
+// for the helpers.js file in utils if i add it.
+const hbs = exphbs.create({ helpers });
 
 // Configure and link a session object with the sequelize store
 const sess = {
@@ -31,8 +31,8 @@ const sess = {
 // Add express-session and store as Express.js middleware
 app.use(session(sess));
 
-/* for helpers.js if i decide to create it
-// app.engine('handlebars', hbs.engine); */
+// for helpers.js if i decide to create it
+app.engine('handlebars', hbs.engine); 
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
