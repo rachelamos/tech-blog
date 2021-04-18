@@ -14,13 +14,13 @@
     <header class="display-flex justify-space-between align-center p-2">
       <nav>
         <!-- Conditionally render login or logout links -->
-        {{!-- {{#if logged_in}} --}}
         <a href="/" class="btn home-btn">Home</a>
         <a href="/dashboard" class="btn home-btn">Dashboard</a>
-        <button class="no-button" id="logout">Logout</button>
-        {{!-- {{else}} --}}
+        {{#if logged_in}}
+        <button class="btn" id="logout">Logout</button>
+        {{else}}
         <a href="/login" class="btn home-btn">Login</a>
-        {{!-- {{/if}} --}}
+        {{/if}}
       </nav>
     </header>
     <main class="container container-fluid mt-5">
