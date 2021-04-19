@@ -1,13 +1,12 @@
 <!-- Loop over each object in the projects array -->
 {{#each posts as |post| }}
-<p>This is the home page</p>
 <div class="row mb-4 post">
   <div class="col justify-content-center">
     <h2>
       <a href="/post/{{post.id}}">{{post.title}}</a>
     </h2>
     <p>
-      <span class="user-info">Written by: {{name}} on {{format_date post.date_created}}</span>
+      <span class="user-info">Written by: {{user.name}} on {{format_date post.date_created}}</span>
     </p>
   </div>
   <div class="col">
