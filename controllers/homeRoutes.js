@@ -51,7 +51,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const postData = await Post.findAll({
