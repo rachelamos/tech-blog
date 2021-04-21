@@ -1,18 +1,14 @@
 <!-- Loop over each object in the projects array -->
 {{#each posts as |post| }}
-<div class="row mb-4 post">
+<div class="row">
   <div class="col justify-content-center">
-    <h2>
-      <a href="/post/{{post.id}}">{{post.title}}</a>
-    </h2>
-    <p>
-      <span class="user-info">Written by {{user.name}} on {{format_date post.date_created}}</span>
-    </p>
-  </div>
-  <div class="col justify-content-center">
-    <p>
-      {{post.description}}
-    </p>
+    <div class="card">
+      <div class="card-header">
+        <a href="/post/{{post.id}}">{{post.title}}</a>
+      </div>
+      <div class="text-align: right">Written by {{user.name}} on {{format_date post.date_created}}</div>
+    </div>
+    <div class="card-text">{{post.description}}</div>
   </div>
 </div>
 {{/each}}
