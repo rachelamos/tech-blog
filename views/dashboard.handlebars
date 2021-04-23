@@ -9,7 +9,7 @@
         <a href="/post/{{post.id}}">{{post.title}}</a>
       </div>
       <div style="text-align: right">Written by {{user.name}} on {{format_date post.date_created}}</div>
-      <div class="btn btn-primary btn-delete" post-id={{post.id}} delete-button="yes" onclick="deletePostHandler(event)" type="delete">Delete Post</div>
+      {{!-- <div class="btn btn-primary btn-delete" post-id={{post.id}} delete-button="yes" onclick="deletePostHandler(event)" type="delete">Delete Post</div> --}}
     </div>
   </div>
 </div>
@@ -26,4 +26,3 @@
 </div>
 {{/if}}
 
-<script src="./js/deletePost.js"></script>
