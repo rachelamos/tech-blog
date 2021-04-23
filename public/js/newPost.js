@@ -12,22 +12,18 @@ const newPostHandler = async (event) => {
   
     if (title && description) {
       // Send the e-mail and password to the server
-      await fetch('/api/post', {
+      const response = await fetch('/api/post', {
         method: 'POST',
         body: JSON.stringify({ title, description }),
         headers: {'Content-Type':'application/json'},
       });
     
-    // document.location.replace('/dashboard');
-    //   if (response.ok) {
-        
-    //   } 
-    }else {
+      if (response.ok) {
+        document.location.replace('/dashboard');
+      
+        }   else {
         alert('Failed to write a new post.');
       }
     
-  };
-  
-//   document
-//     .querySelector('.newpost-form')
-//     .addEventListener('click', newPostHandler);
+  }
+}

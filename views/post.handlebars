@@ -10,7 +10,8 @@
     </div>
   </div>
 </div>
-  {{#each comments as |comment|}}
+
+{{#each comments as |comment|}}
  <div class="container-fluid comment">
     <div class="row">
       <div class="col-1"></div>
@@ -28,8 +29,10 @@
     </div>
   </div>
   {{/each}}
-<form class="form comment-form">
+
+
 <div class="card-body">
+  <form class="form comment-form">
   <h6 class="card-title">Comment:</h6>
     <div class="form-group">
       <label for="comment">
@@ -37,8 +40,9 @@
       </label>
     </div>
     <div class="form-group">
-      <a class="btn btn-primary" post-id="{{id}}" type="submit">Submit</a>
+      <button class="btn btn-primary" post-id="{{post.id}}" onclick="commentFormHandler(event)" type="submit">Submit</button>
     </div>
+    </form>
 </div>
-</form>
-<script source="/js/comment.js"></script>
+
+<script src="/js/comment.js"></script>
