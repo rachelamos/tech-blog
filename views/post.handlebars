@@ -2,14 +2,13 @@
   <div class="col justify-content-center">
     <div class="card">
       <div class="card-header">
-        <a href="/post/{{post.id}}">{{post.title}}</a>
+        <a href="/post/{{id}}">{{title}}</a>
         <div class="text-align: right">Written by {{user.name}} on {{format_date date_created}}</div>
       </div>
-      <div class="card-text">{{post.description}}</div>
+      <div class="card-text">{{description}}</div>
     </div>
   </div>
 </div>
-
 
  <div class="container-fluid comment">
 {{#each comments as |comment|}}
