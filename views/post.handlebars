@@ -10,14 +10,15 @@
   </div>
 </div>
 
-{{#each comments as |comment|}}
+
  <div class="container-fluid comment">
+{{#each comments as |comment|}}
     <div class="row">
       <div class="col-1"></div>
       <div class="col">
         <div class="card">
           <div class="card-header">
-            <div style="text-align: right">Posted by {{user_id}} on {{format_date date_created}}</div>
+            <div style="text-align: right">Posted by {{user.name}} on {{format_date date_created}}</div>
           </div>
           <div class="card-body">
             <p class="card-text">{{description}}</p>
@@ -26,8 +27,10 @@
       </div>
       <div class="col-1"></div>
     </div>
+ {{/each}}
   </div>
-  {{/each}}
+  </br>
+ 
 </br>
 <div class="card-header">
   <h3>Update the Post</h3>
