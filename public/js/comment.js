@@ -11,7 +11,7 @@ const commentFormHandler = async (event) => {
   
     if (comment) {
       // Send the e-mail and password to the server
-      const response = await fetch('/api/comment', {
+      const response = await fetch(`/api/comment`, {
         method: 'POST',
         body: JSON.stringify({ comment, postId }),
         headers: { 'Content-Type': 'application/json' },

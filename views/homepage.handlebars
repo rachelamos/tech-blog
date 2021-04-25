@@ -5,10 +5,11 @@
     <div class="card">
       <div class="card-header">
         <a href="/post/{{post.id}}">{{post.title}}</a>
-      </div>
       <div class="text-align: right">Written by {{user.name}} on {{format_date post.date_created}}</div>
     </div>
+    <div class="card-body">
     <div class="card-text">{{post.description}}</div>
+    </div>
   </div>
 </div>
 {{/each}}
