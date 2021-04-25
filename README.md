@@ -30,7 +30,7 @@ From the terminal, enter 'npm start'.
 [Link to Application](https://github.com/rachelamos/tech-blog)
 
 ### Deployement
-[Link to Heroku]()
+[Link to Heroku](https://salty-ocean-05546.herokuapp.com/)
 
 ### Questions
 If you have any other questions, you can reach me:
